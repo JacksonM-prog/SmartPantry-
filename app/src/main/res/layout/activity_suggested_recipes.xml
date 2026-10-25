@@ -3,49 +3,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#FFFFFF">
+    android:background="#F4F8F4"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WHAT CAN YOU MAKE?"
+        android:textColor="#43864A"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Suggested Recipes"
-        android:textSize="25sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#2E7D32"
-        android:paddingBottom="8dp" />
+        android:textColor="#205C29"
+        android:paddingTop="5dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Only recipes you can make with your current pantry are shown."
+        android:text="Recipes made with what is already in your pantry."
         android:textSize="14sp"
-        android:textColor="#558B5A"
-        android:paddingBottom="12dp" />
+        android:textColor="#687B69"
+        android:paddingTop="5dp"
+        android:paddingBottom="16dp" />
 
-    <TextView
-        android:id="@+id/txtNoRecipes"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No recipes match your pantry yet. Add more ingredients."
-        android:textColor="#2E7D32"
-        android:background="#E8F5E9"
-        android:visibility="gone"
-        android:padding="12dp" />
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:background="#E1F0E2">
 
-    <ListView
-        android:id="@+id/listRecipes"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No missing ingredients"
+            android:textColor="#205C29"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Every suggested recipe must have all its required ingredients available in sufficient quantities."
+            android:textColor="#426D46"
+            android:textSize="13sp"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:divider="#C8E6C9"
-        android:dividerHeight="1dp" />
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/txtNoRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No recipes match your pantry yet. Add more ingredients and try again."
+            android:textColor="#426D46"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="#E8F5E9"
+            android:visibility="gone"
+            android:padding="20dp" />
+
+        <ListView
+            android:id="@+id/listRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:divider="#E0EAE0"
+            android:dividerHeight="1dp"
+            android:paddingTop="4dp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnBackToPantry"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Back to Pantry"
+        android:layout_height="52dp"
+        android:layout_marginTop="14dp"
+        android:text="Back to My Pantry"
+        android:textAllCaps="false"
+        android:textSize="15sp"
         android:backgroundTint="#2E7D32"
         android:textColor="#FFFFFF" />
 

@@ -2,63 +2,119 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#F4F8F4"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOUR RECIPE"
+            android:textColor="#43864A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:paddingBottom="8dp" />
 
         <TextView
             android:id="@+id/txtRecipeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Recipe Name"
-            android:textSize="26sp"
+            android:textSize="27sp"
             android:textStyle="bold"
-            android:textColor="#2E7D32" />
+            android:textColor="#FFFFFF"
+            android:background="#2E7D32"
+            android:padding="20dp" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Required Ingredients"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#2E7D32"
-            android:paddingTop="20dp" />
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="20dp"
+            android:background="#FFFFFF">
 
-        <TextView
-            android:id="@+id/txtRecipeIngredients"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#205C29" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Everything you need for this recipe"
+                android:textSize="13sp"
+                android:textColor="#718071"
+                android:paddingTop="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#E0EAE0" />
+
+            <TextView
+                android:id="@+id/txtRecipeIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="#344A35" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#333333"
-            android:paddingTop="8dp" />
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:padding="20dp"
+            android:background="#FFFFFF">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Preparation Method"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#2E7D32"
-            android:paddingTop="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preparation Method"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#205C29" />
 
-        <TextView
-            android:id="@+id/txtRecipeInstructions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#333333"
-            android:paddingTop="8dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#E0EAE0" />
+
+            <TextView
+                android:id="@+id/txtRecipeInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:textColor="#344A35" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnBackRecipes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="12dp"
             android:text="Back to Recipes"
-            android:layout_marginTop="24dp"
+            android:textAllCaps="false"
+            android:textSize="15sp"
             android:backgroundTint="#2E7D32"
             android:textColor="#FFFFFF" />
 
